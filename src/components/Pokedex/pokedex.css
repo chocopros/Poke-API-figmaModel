@@ -1,0 +1,104 @@
+.pokedex-container{
+    min-width: 667px;
+}
+
+.header-Pokedex{
+    position: relative;
+    background-color: #D93F3F;
+    height: 170px;
+}
+
+.logo-pokedex img{
+    width: 430px;
+    height: 76px;
+    position: absolute;
+    bottom: 40px;
+    left: 10%;
+}
+
+.black-line{
+    background-color: #0C0C0C;
+    width: 100%;
+    height: 50px;
+
+    position: absolute;
+    bottom: 0;
+}
+
+.black-line .closet-ball{
+    margin-right: 7%;
+    position: relative;
+}
+
+
+.black-line img{
+    position: absolute;
+    right: 0;
+    margin-top: -30px;
+ 
+
+}
+
+.black-line .ball-point{
+    position: absolute;
+    right: 27px;
+    bottom: -59px;
+    
+}
+
+.body-container{
+    margin-top: 50px;
+    padding: 0 30px;
+}
+
+.title-trainer,
+.title-trainer span{
+    font-size: 20px;
+}
+
+.title-trainer span{
+    color: red;
+    font-size: 24px;
+}
+
+/**************** BUTTONS *****************/
+.filter-pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:flex-end;
+    gap: 50px;
+    
+}
+.input-trainer-pokemons{
+    min-width: 300px;
+    margin-top: 30px ;
+}
+
+.input-trainer-pokemons input{
+    width: 300px;
+    height: 48px;
+    border: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    padding: 0 15px;
+    font-size: 18px;
+}
+.input-trainer-pokemons input::placeholder{
+    color: rgb(225, 225, 226);
+}
+
+.input-trainer-pokemons button{
+    border: none;
+    color: white;
+    width: 100px;
+    height: 48px;
+    background: #D93F3F;
+    font-size: 18px; 
+}
+
+/******** SELECTOR *******/
+
+.filter-pokemon select{
+    width: 200px;
+    height: 48px;
+}

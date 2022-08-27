@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import HeroPokemons from './components/HeroPokemons/HeroPokemons'
+import Pokedex from './components/Pokedex/Pokedex'
 
 function App() {
 
@@ -12,7 +12,8 @@ function App() {
         <Route path='/' element={<HeroPokemons />} />
 
         <Route>
-          <Route path='/pokedex' element={<h2>Pokedex</h2>} />
+          
+          <Route path='/pokedex' element={<Pokedex />} />
           <Route path='/pokedex/:id' element={<h2>PokedexDetails</h2>} />
         </Route>
 

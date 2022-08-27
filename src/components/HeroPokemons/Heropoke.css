@@ -22,7 +22,7 @@
 
 .title-ppal h2{
     font-size: 50px;
-    color: red;
+    color: #D93F3F;
 }
 
 .title-ppal h3{
@@ -43,6 +43,7 @@
 }
 
 .input-trainer-pokemons button{
+    border: none;
     color: white;
     width: 200px;
     height: 68px;
