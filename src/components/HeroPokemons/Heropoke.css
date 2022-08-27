@@ -1,0 +1,89 @@
+.Hero-Pokemons{
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-body{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+
+    height: calc(100vh - 150px);
+    min-height: 480px;
+
+}
+
+.title-ppal{
+    text-align: center;
+}
+
+.title-ppal h2{
+    font-size: 50px;
+    color: red;
+}
+
+.title-ppal h3{
+    font-size: 25px;
+}
+
+.input-trainer-pokemons input{
+    width: 331px;
+    height: 68px;
+    border: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    padding: 0 15px;
+
+    font-size: 25px;
+}
+.input-trainer-pokemons input::placeholder{
+    color: rgb(225, 225, 226);
+}
+
+.input-trainer-pokemons button{
+    color: white;
+    width: 200px;
+    height: 68px;
+    background: #D93F3F;
+    font-size: 25px; 
+}
+
+
+.footerHero{
+    width: 100%;
+    height: 150px;
+    background-color: #D93F3F;
+    position: relative;
+}
+
+.back-black{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.img-button-poke{
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: 20px;
+    
+    z-index: 1;
+
+}
+
+.img-button-poke .up-button{
+    position: absolute;
+    top: 27px;
+    z-index: 2;
+}
