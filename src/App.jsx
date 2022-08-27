@@ -11,6 +11,11 @@ function App() {
       <Routes>
         <Route path='/' element={<HeroPokemons />} />
 
+        <Route>
+          <Route path='/pokedex' element={<h2>Pokedex</h2>} />
+          <Route path='/pokedex/:id' element={<h2>PokedexDetails</h2>} />
+        </Route>
+
       </Routes>
     </div>
   )
