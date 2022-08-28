@@ -102,3 +102,25 @@
     width: 200px;
     height: 48px;
 }
+
+.body-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+
+/********** CARD ******************/
+
+.container-cards-pokemons{
+    max-width: 1400px;
+    
+    margin: 0 auto;
+    margin-top: 70px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+
+}

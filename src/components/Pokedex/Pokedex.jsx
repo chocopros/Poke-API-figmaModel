@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './pokedex.css'
+import { useDispatch, useSelector } from 'react-redux'
+import CardPoke from './CardPokemon/CardPoke'
+import axios from 'axios'
 
 const Pokedex = () => {
+
+    const nameTrainer = useSelector(state => state.nameTrainer)
+
+    const [pokemons, setPokemons] = useState()
+
+    useEffect(()=>{
+        const url = "https://pokeapi.co/api/v2/pokemon"
+        axios.get(url)
+            .then(res => setPokemons(res.data))
+            .catch(err => console.log(err))
+    },[])
+
+   //console.log(pokemons)
+
   return (
     <section className='pokedex-container' >
         <header className='header-Pokedex'>
@@ -17,7 +34,7 @@ const Pokedex = () => {
         </header>
 
         <div className="body-container">
-            <h2 className='title-trainer'><span>Nombre del Jugador </span>, aquí podrás encontrar tu pokemón favorito.</h2>
+            <h2 className='title-trainer'><span>Bienvenido {nameTrainer} </span>, aquí podrás encontrar tu pokemón favorito.</h2>
             <div className="filter-pokemon">
                 <form className='input-trainer-pokemons'>
                     <input type="text" />
@@ -33,6 +50,18 @@ const Pokedex = () => {
                     <option value="Fantasma">Fantasma</option>
                 </select>
             </div>
+        </div>
+
+        <div className="container-cards-pokemons">
+            {
+                pokemons?.results.map(pokemon => (
+                    <CardPoke
+                        key={pokemon.url}
+                        url={pokemon.url}
+                    />
+                ))
+            }
+            
         </div>
 
     </section>

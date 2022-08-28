@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import {setNameTrainer} from '../../store/Slices/nameTrainer.slice'
 import './Heropoke.css'
@@ -20,9 +20,9 @@ const HeroPokemons = () => {
       navigate('/pokedex')
     }
     e.target.name.value = ""
-
-
   }
+
+  
 
   return (
     <section className='Hero-Pokemons'>
