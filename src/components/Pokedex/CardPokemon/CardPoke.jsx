@@ -13,8 +13,6 @@ const CardPoke = ({url}) => {
 
     },[])
 
-   
-
   return (
     <article className='card'>
         <header className='card-header'>
@@ -38,22 +36,22 @@ const CardPoke = ({url}) => {
             <div className='list-stat'>
                 <div className='barra-up'>
                     <div className='val-stat'>
-                        <div>HP</div>
-                        <div>50</div>
+                        <div className='val-txt'>{pokemon?.stats[0].stat.name}</div>
+                        <div className='val-num'>{pokemon?.stats[0].base_stat}</div>
                     </div>
                     <div className='val-stat'>
-                        <div>DEFENSE</div>
-                        <div>50</div>
+                        <div className='val-txt'>{pokemon?.stats[1].stat.name}</div>
+                        <div className='val-num'>{pokemon?.stats[1].base_stat}</div>
                     </div>
                 </div>
                 <div className='barra-up'>
                     <div  className='val-stat'>
-                        <div>HP</div>
-                        <div>50</div>
+                        <div className='val-txt'>{pokemon?.stats[2].stat.name}</div>
+                        <div className='val-num'>{pokemon?.stats[2].base_stat}</div>
                     </div>
                     <div className='val-stat'>
-                        <div >DEFENSE</div>
-                        <div>50</div>
+                        <div className='val-txt'>{pokemon?.stats[5].stat.name}</div>
+                        <div className='val-num'>{pokemon?.stats[5].base_stat}</div>
                     </div>
                 </div>
           

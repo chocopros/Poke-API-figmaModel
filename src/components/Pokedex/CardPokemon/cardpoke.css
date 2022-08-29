@@ -28,7 +28,7 @@
 
 .card-body {
 
-    padding-top: 50px;
+    padding-top: 45px;
     background-color: white;
     height: 250px;
 
@@ -85,6 +85,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.val-num{
+    text-align: center;
+    width: 36px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.val-txt{
+    text-align: center;
+    width: 36px;
+    color: #9F9F9F;
+    font-weight: 300;
+    font-size: 12px;
 }
 
 
