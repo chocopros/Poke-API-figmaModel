@@ -28,7 +28,7 @@ const HeroPokemons = () => {
     <section className='Hero-Pokemons'>
 
       <div className="hero-body">
-        <div>
+        <div className='pokeLogo'>
           <img src="src\assets\img\LOGO.svg" alt="" />
         </div>
         <div className='title-ppal'>

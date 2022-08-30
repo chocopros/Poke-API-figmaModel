@@ -1,5 +1,6 @@
 .Hero-Pokemons{
     width: 100%;
+    min-width: 320px;
 }
 
 .hero-body{
@@ -15,17 +16,21 @@
 
 }
 
+.pokeLogo img{
+    height: 120px;
+}
+
 .title-ppal{
     text-align: center;
 }
 
 .title-ppal h2{
-    font-size: 50px;
+    font-size: clamp(25px, 5vw, 50px);
     color: #D93F3F;
 }
 
 .title-ppal h3{
-    font-size: 25px;
+    font-size: clamp(16px, 2vw, 25px);
 }
 
 .input-trainer-pokemons input{
@@ -86,4 +91,20 @@
     position: absolute;
     top: 27px;
     z-index: 2;
+}
+
+@media (max-width: 671px) {
+    .pokeLogo img{
+        height: 80px;
+    }
+}
+@media (max-width: 425px) {
+    .pokeLogo img{
+        height: 65px;
+    }
+}
+@media (max-width: 375px) {
+    .pokeLogo img{
+        height: 55px;
+    }
 }

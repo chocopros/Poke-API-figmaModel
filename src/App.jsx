@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import HeroPokemons from './components/HeroPokemons/HeroPokemons'
 import Pokedex from './components/Pokedex/Pokedex'
 import ProtectedRoutes from './components/ProtectedRoutes/ProtectedRoutes'
+import PokemonDetails from './components/Pokedex/Pokemon-Details/PokemonDetails'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         
         <Route element={<ProtectedRoutes />}>
           <Route path='/pokedex' element={<Pokedex />} />
-          <Route path='/pokedex/:id' element={<h2>PokedexDetails</h2>} />
+          <Route path='/pokedex/:name' element={<PokemonDetails />} />
         </Route>
 
       </Routes>
