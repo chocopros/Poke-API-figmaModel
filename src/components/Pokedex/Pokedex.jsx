@@ -3,6 +3,7 @@ import './pokedex.css'
 import { useDispatch, useSelector } from 'react-redux'
 import CardPoke from './CardPokemon/CardPoke'
 import axios from 'axios'
+import HeaderPoke from './Header-Pokedex/HeaderPoke'
 
 const Pokedex = () => {
 
@@ -60,17 +61,8 @@ const Pokedex = () => {
 
   return (
     <section className='pokedex-container' >
-        <header className='header-Pokedex'>
-            <div className='logo-pokedex'>
-                <img src="src\assets\img\LOGO.svg" alt="" />
-            </div>
-            <div className='black-line'>
-                <div className="closet-ball">
-                    <img src="src\assets\img\img-pokedex\Ellipse 3.png" alt="" />
-                    <img className='ball-point' src="src\assets\img\img-pokedex\Ellipse 4.png" alt="" />
-                </div>
-            </div>  
-        </header>
+
+        <HeaderPoke />
 
         <div className="body-container">
             <h2 className='title-trainer'><span>Bienvenido {nameTrainer} </span>, aquí podrás encontrar tu pokemón favorito.</h2>
@@ -96,7 +88,7 @@ const Pokedex = () => {
 
         <div className="container-cards-pokemons">
             {
-                pokemons?.slice(0,20).map(pokemon => (
+                pokemons?.map(pokemon => (
                     <CardPoke
                         key={pokemon.url}
                         url={pokemon.url}

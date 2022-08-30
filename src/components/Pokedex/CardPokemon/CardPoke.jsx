@@ -14,8 +14,8 @@ const CardPoke = ({url}) => {
     },[])
 
   return (
-    <article className='card'>
-        <header className='card-header'>
+    <article className={`card card-${pokemon?.types[0].type.name}`}>
+        <header className={`card-header bg-header-${pokemon?.types[0].type.name}`}>
             <img src={pokemon?.sprites.other["official-artwork"]["front_default"]} alt={pokemon?.name} />
         </header>
         <div className='card-body'>
