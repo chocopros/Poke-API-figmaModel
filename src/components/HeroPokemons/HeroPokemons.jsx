@@ -32,7 +32,7 @@ const HeroPokemons = () => {
           <img src="src\assets\img\LOGO.svg" alt="" />
         </div>
         <div className='title-ppal'>
-          <h2>¡Hola entrenador!</h2>
+          <h2>¡Hola Entrenador!</h2>
           <h3>Para poder comenzar, dame tu nombre</h3>
         </div>
         <form onSubmit={handleSubmit} className="input-trainer-pokemons">
