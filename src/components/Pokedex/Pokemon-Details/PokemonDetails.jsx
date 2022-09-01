@@ -39,7 +39,7 @@ const PokemonDetails = () => {
 
           <BodyDetails pokemon={pokemon} />
 
-          <StatsDetails pokemon={pokemon} />
+          
 
 
         </article>
