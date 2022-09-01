@@ -5,7 +5,7 @@ import HeaderPoke from '../Header-Pokedex/HeaderPoke'
 import BodyDetails from './bodyDetails/BodyDetails'
 import HeadDetails from './head-details/HeadDetails'
 import './pokemonDetails.css'
-import StatsDetails from './StatsDetails/StatsDetails'
+
 
 const PokemonDetails = () => {
 
