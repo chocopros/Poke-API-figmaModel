@@ -2,7 +2,10 @@ import axios from 'axios'
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import HeaderPoke from '../Header-Pokedex/HeaderPoke'
+import BodyDetails from './bodyDetails/BodyDetails'
+import HeadDetails from './head-details/HeadDetails'
 import './pokemonDetails.css'
+import StatsDetails from './StatsDetails/StatsDetails'
 
 const PokemonDetails = () => {
 
@@ -32,65 +35,12 @@ const PokemonDetails = () => {
 
         <article className='pokemon-details-container'>
 
-          <header className='head-details'>
-            <img src={pokemon?.sprites.other["official-artwork"]["front_default"]} alt={pokemon?.name} />
-          </header>
+          <HeadDetails pokemon={pokemon} />
 
-          <div className='body-details'>
-            <h2>#{pokemon?.id}</h2>
-            <h1 className='title-namePokemon'>{name}</h1>
+          <BodyDetails pokemon={pokemon} />
 
-            <ul className='list-propeps-poke'>
-              <li>
-                <h3>Peso</h3>
-                <div>{pokemon?.weight}</div>
-              </li>
-              <li>
-                <h3>Altura</h3>
-                <div>{pokemon?.height}</div>
-              </li>
-            </ul>
+          <StatsDetails pokemon={pokemon} />
 
-            <div className="typeHabi-Container">
-
-              <div className='type-habilitys'>
-                <div className='details-midle'>
-                  <h2>Tipo</h2>
-                  <div className='details-type-hability'>
-                    {
-                      pokemon?.types.map(type => (
-
-                        <div className='type-option'><h3>{type.type.name}</h3></div>
-
-                      ))  
-                    
-                    }
-                  </div>
-                </div>
-
-                <div className='details-midle'>
-                  <h2>Habilidades</h2>
-                  <div className='details-type-hability'>
-                    {
-                      pokemon?.abilities.map(ability => (
-
-                        <div className='type-option'><h3>{ability.ability.name}</h3></div>
-
-                      ))  
-                    
-                    }
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="Stats">
-              
-            </div>
-
-
-
-          </div>
 
         </article>
         

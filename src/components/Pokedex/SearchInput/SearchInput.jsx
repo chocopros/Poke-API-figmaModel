@@ -5,6 +5,7 @@ const SearchInput = ({setPokeSearch}) => {
     const habdleSubmit = e => {
         e.preventDefault()
         setPokeSearch(e.target.searchText.value.trim().toLowerCase())
+        e.target.searchText.value = ''
     }
 
   return (

@@ -1,0 +1,66 @@
+/****************** DETAILS***************************/
+.body-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    padding: 20px;
+    
+}
+
+.body-details h2,
+.body-details h1{
+    font-size: 43px;
+    text-transform: capitalize;
+}
+
+.list-propeps-poke{
+
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+    text-align: center;
+}
+/************TypeHabi-Container*****************/
+
+.typeHabi-Container{
+    width: 100%;
+    
+}
+
+.type-habilitys{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.details-midle{
+    width: 50%;
+    text-align: center;
+}
+
+.details-type-hability{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    
+}
+
+.details-midle h2{
+    font-size: 25px ;
+}
+
+.type-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CAE099;
+    height: 40px;
+    width: 150px;
+    
+    
+    
+}

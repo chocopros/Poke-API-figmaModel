@@ -1,0 +1,16 @@
+.head-details{
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    height: 185px;
+    background:  linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+}
+
+.head-details img{
+    position: absolute;
+    bottom: 5px;
+    width: 350px;
+
+}

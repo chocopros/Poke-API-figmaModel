@@ -5,6 +5,7 @@ import CardPoke from './CardPokemon/CardPoke'
 import axios from 'axios'
 import HeaderPoke from './Header-Pokedex/HeaderPoke'
 import SearchInput from './SearchInput/SearchInput'
+import SelectType from './SelectType/SelectType'
 
 
 const Pokedex = () => {
@@ -15,44 +16,49 @@ const Pokedex = () => {
 
     const [pokeSearch, setPokeSearch] = useState()
 
+    const [typePokemons, setTypePokemons] = useState('All')
+
     useEffect(()=>{
         let url
-
-        if(pokeSearch){
-
-            const url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`
-
-            const obj = {
-                results: [
-                    {
-                        url
-                    }
-                ]
-            }
-            setPokemons(obj)
+    
+        //logica cuando el usuario busca por los filtros
+        if(pokeSearch || typePokemons !== 'All' ){
             
+            if(pokeSearch){
+
+                const url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`
+                const obj = {
+                    results: [
+                        {
+                            url
+                        }
+                    ]
+                }
+                setPokemons(obj)
+
+            } else { //logica por type
+                url = `https://pokeapi.co/api/v2/type/${typePokemons}/`
+                axios.get(url)
+                    .then(res => {
+                        const arr = res.data.pokemon.map(e => e.pokemon)
+                        
+                        
+                        setPokemons({results: arr})
+                    })
+                    .catch(err => console.log(err))
+
+            }  
         } else {
             url = "https://pokeapi.co/api/v2/pokemon/"
-        }   
-        axios.get(url)
+            axios.get(url)
             .then(res => {setPokemons(res.data)})
             .catch(err => console.log(err))
+        }   
+
             
-    },[pokeSearch])
+    },[pokeSearch, typePokemons])
 
-   //type Pokemon
-
-   const [typePokemons, setTypePokemons] = useState()
-
-   useEffect(()=>{
-
-    const url = "https://pokeapi.co/api/v2/type/"
-    axios.get(url)
-        .then(res => setTypePokemons(res.data.results))
-        .catch(err => console.log(err))
-    },[])
-
-    //search Pokemon Using form input
+    console.log(pokemons)
 
 
   return (
@@ -63,15 +69,18 @@ const Pokedex = () => {
 
         <div className="body-container">
             <h2 className='title-trainer'><span>Bienvenido {nameTrainer}</span>, aquí podrás encontrar tu pokemón favorito.</h2>
-
-            <SearchInput setPokeSearch={setPokeSearch} />
+            <div className='filter-Container'>
+                <SearchInput setPokeSearch={setPokeSearch} />
+                <SelectType setTypePokemons={setTypePokemons} />
+            </div>
+        
         </div>
 
         
 
         <div className="container-cards-pokemons">
             {
-                pokemons?.results.map(pokemon => (
+                pokemons?.results.slice(0,50).map(pokemon => (
                     <CardPoke
                         key={pokemon.url}
                         url={pokemon.url}

@@ -52,18 +52,47 @@
     font-size: 18px; 
 }
 
-/******** SELECTOR *******/
+/******** SELECTOR - FILTRO *******/
 
-.filter-pokemon select{
-    width: 200px;
-    height: 48px;
+.filter-Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+
+    margin-top: 50px;
 }
 
-.body-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    margin-top: 70px;
+.filter-Container button{
+    border: none;
+    color: white;
+    width: 120px;
+    height: 38px;
+    background: #D93F3F;
+    font-size: 25px; 
 }
+
+.filter-Container input{
+    width: 230px;
+    height: 38px;
+    border: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    padding: 0 15px;
+
+    font-size: 25px;
+}
+
+.filter-Container select{
+    text-align: center;
+    width: 230px;
+    height: 38px;
+    border: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    padding: 0 15px;
+
+    font-size: 25px;
+}
+
 
 
 /********** CARD-CONTAINER ******************/
