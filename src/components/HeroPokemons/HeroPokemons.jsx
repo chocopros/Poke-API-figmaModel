@@ -29,10 +29,10 @@ const HeroPokemons = () => {
 
       <div className="hero-body">
         <div className='pokeLogo'>
-          <img src="src\assets\img\LOGO.svg" alt="" />
+          <img src="public\img\LOGO.svg" alt="" />
         </div>
         <div className='title-ppal'>
-          <h2>¡Hola Entrenador!</h2>
+          <h2>¡¡Hola Entrenador!!</h2>
           <h3>Para poder comenzar, dame tu nombre</h3>
         </div>
         <form onSubmit={handleSubmit} className="input-trainer-pokemons">
@@ -43,8 +43,8 @@ const HeroPokemons = () => {
   
       <footer className='footerHero'>
         <div className="img-button-poke">
-          <img className='back-button' src="src\assets\img\img-hero\Ellipse 3.png" alt="" />
-          <img className='up-button' src="src\assets\img\img-hero\Ellipse 4.png" alt="" />
+          <img className='back-button' src="public\img\img-hero\Ellipse 3.png" alt="" />
+          <img className='up-button' src="public\img\img-hero\Ellipse 4.png" alt="" />
         </div>
         <div className='back-black'></div>
       </footer>
