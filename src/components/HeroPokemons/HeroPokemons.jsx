@@ -29,7 +29,7 @@ const HeroPokemons = () => {
 
       <div className="hero-body">
         <div className='pokeLogo'>
-          <img src="https://i.ibb.co/fXhRhyF/image-logo.png" alt="Logo-pokedex" />
+          <img src="src/assets/img/LOGO.svg" alt="Logo-pokedex" />
         </div>
         <div className='title-ppal'>
           <h2>¡¡Hola Entrenador!!</h2>
